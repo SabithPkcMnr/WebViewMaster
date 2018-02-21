@@ -18,3 +18,4 @@ I have included some useful methods of WebView to bring a browser environment to
 -Back button to go back (otherthan web back button)
 <br><br>
 Hope that you like it! Here's a screenshot on how it works!
+<img src="/Screenshots/Sabith%20Pkc%20Mnr%20Android%20WebView%20Tutorial.gif" height="480" width="270" >
