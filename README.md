@@ -2,7 +2,7 @@
 This is a Android WebView sample project. Including all the significant role characters of WebView into the app. See the screenshot for further information. A project by <a href="https://www.youtube.com/SabithPkcMnr?sub_confirmation=1">Sabith Pkc Mnr!</a>
 
 # How this work?
-I have included some useful methods of WebView to bring a browser environment to a simple Black Activity of Android Studio. This include:
+I have included some useful methods of WebView to bring a browser environment to a simple Blank Activity of Android Studio. This include:
 <h3>WebView Methods</h3>
 -JavaScript support.<br>
 -Back Button to previous page.<br>
