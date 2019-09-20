@@ -13,8 +13,8 @@ I have included some useful methods of WebView to bring a browser environment to
 -Download Listener to check if a file ready to download<br>
 <br>
 <h3>Extras</h3>
--Webpage Title on 
--App Exit Dialog<br>
+-Webpage Title on ActionBar
+-App Exit Dialog on first page<br>
 -Back button to go back (otherthan web back button)
 <br><br>
 Hope that you like it! Here's a screenshot on how it works!
