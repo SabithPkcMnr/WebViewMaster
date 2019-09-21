@@ -20,4 +20,4 @@ I have included some useful methods of WebView to bring a browser environment to
 Hope that you like it! Here's a screenshot on how it works!
 <img src="/Screenshots/Sabith%20Pkc%20Mnr%20Android%20WebView%20Tutorial.gif" height="480" width="270" >
 <br><br>
-<h4>Hey, while you're here why don't you think of following me for some awesome projects like this, ah?<a href="https://github.com/SabithPkcMnr">Follow Me on my Profile!</a></h4>
+<h4>Hey, while you're here why don't you think of following me for awesome projects like this, ah?<a href="https://github.com/SabithPkcMnr">Follow Me on my Profile!</a></h4>
