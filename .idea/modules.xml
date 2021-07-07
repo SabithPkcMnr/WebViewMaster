@@ -2,10 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Desktop-WebViewMaster.iml" filepath="$PROJECT_DIR$/.idea/modules/Desktop-WebViewMaster.iml" group="WebViewMaster" />
-      <module fileurl="file://$PROJECT_DIR$/WebViewMaster.iml" filepath="$PROJECT_DIR$/WebViewMaster.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WebViewMaster-app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WebViewMaster-app.iml" group="WebViewMaster/app" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebViewMaster.iml" filepath="$PROJECT_DIR$/.idea/modules/WebViewMaster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.iml" />
     </modules>
   </component>
 </project>
