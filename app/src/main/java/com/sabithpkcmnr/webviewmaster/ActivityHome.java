@@ -3,8 +3,6 @@ package com.sabithpkcmnr.webviewmaster;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
-import android.graphics.Color;
-import android.graphics.PorterDuff;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.net.Uri;
@@ -12,23 +10,23 @@ import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
+import android.view.View;
 import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.Toast;
 
-import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.drawable.DrawableCompat;
+
+import com.google.android.material.dialog.MaterialAlertDialogBuilder;
+import com.google.android.material.progressindicator.LinearProgressIndicator;
 
 public class ActivityHome extends AppCompatActivity {
 
     WebView superWebView;
-    ImageView superImageView;
-    ProgressBar superProgressBar;
+    LinearProgressIndicator superProgressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,25 +34,18 @@ public class ActivityHome extends AppCompatActivity {
         setContentView(R.layout.activity_home);
         getSupportActionBar().setDisplayShowHomeEnabled(true);
 
-        superImageView = findViewById(R.id.myImageView);
-        superProgressBar = findViewById(R.id.myProgressBar);
         superWebView = findViewById(R.id.myWebView);
-
+        superProgressBar = findViewById(R.id.myProgressBar);
         superProgressBar.setMax(100);
 
         superWebView.loadUrl("https://www.google.com");
         superWebView.getSettings().setJavaScriptEnabled(true);
         superWebView.setWebViewClient(new WebViewClient() {
-
-            @Override
-            public void onPageStarted(WebView view, String url, Bitmap favicon) {
-                super.onPageStarted(view, url, favicon);
-
-            }
-
             @Override
             public void onPageFinished(WebView view, String url) {
                 super.onPageFinished(view, url);
+                superProgressBar.setVisibility(View.GONE);
+                getSupportActionBar().setSubtitle(url);
             }
         });
         superWebView.setWebChromeClient(new WebChromeClient() {
@@ -74,10 +65,8 @@ public class ActivityHome extends AppCompatActivity {
             @Override
             public void onReceivedIcon(WebView view, Bitmap icon) {
                 super.onReceivedIcon(view, icon);
-                superImageView.setImageBitmap(icon);
-
-                Drawable newdrawable = new BitmapDrawable(getResources(), Bitmap.createScaledBitmap(icon, 90,90, true));
-                //newdrawable.setColorFilter(Color.BLUE, PorterDuff.Mode.SRC_ATOP);
+                Drawable newdrawable = new BitmapDrawable(getResources(),
+                        Bitmap.createScaledBitmap(icon, 90, 90, true));
                 getSupportActionBar().setDisplayHomeAsUpEnabled(true);
                 getSupportActionBar().setHomeAsUpIndicator(newdrawable);
 
@@ -93,7 +82,6 @@ public class ActivityHome extends AppCompatActivity {
                 startActivity(superIntent);
             }
         });
-
     }
 
     @Override
@@ -106,7 +94,6 @@ public class ActivityHome extends AppCompatActivity {
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
-
             case R.id.myMenuOne:
                 onBackPressed();
                 break;
@@ -114,11 +101,6 @@ public class ActivityHome extends AppCompatActivity {
             case R.id.myMenuTwo:
                 GoForward();
                 break;
-
-            case R.id.myMenuThree:
-
-                break;
-
         }
         return true;
     }
@@ -136,22 +118,18 @@ public class ActivityHome extends AppCompatActivity {
         if (superWebView.canGoBack()) {
             superWebView.goBack();
         } else {
-            AlertDialog.Builder dialog = new AlertDialog.Builder(this);
-            dialog.setTitle("Exit App");
-            dialog.setMessage("Browser has nothing to go back, so what next?");
-            dialog.setPositiveButton("EXIT ME", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    finish();
-                }
-            });
-            dialog.setCancelable(false);
-            dialog.setNegativeButton("STAY HERE", new DialogInterface.OnClickListener() {
-                @Override
-                public void onClick(DialogInterface dialog, int which) {
-                    dialog.dismiss();
-                }
-            }).show();
+            new MaterialAlertDialogBuilder(this)
+                    .setTitle("Exit the app")
+                    .setMessage("There is no more pages to go back. So what's next?")
+                    .setPositiveButton("Exist App", new DialogInterface.OnClickListener() {
+                        @Override
+                        public void onClick(DialogInterface dialog, int which) {
+                            finish();
+                        }
+                    })
+                    .setNegativeButton("Stay Here", null)
+                    .create()
+                    .show();
 
         }
     }
