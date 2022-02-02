@@ -15,7 +15,6 @@ import android.webkit.DownloadListener;
 import android.webkit.WebChromeClient;
 import android.webkit.WebView;
 import android.webkit.WebViewClient;
-import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
@@ -87,7 +86,7 @@ public class ActivityHome extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater myMenuInflater = getMenuInflater();
-        myMenuInflater.inflate(R.menu.home_menu, menu);
+        myMenuInflater.inflate(R.menu.menu_home, menu);
         return super.onCreateOptionsMenu(menu);
     }
 
