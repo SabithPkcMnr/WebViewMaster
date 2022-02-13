@@ -120,7 +120,7 @@ public class ActivityHome extends AppCompatActivity {
             new MaterialAlertDialogBuilder(this)
                     .setTitle("Exit the app")
                     .setMessage("There is no more pages to go back. So what's next?")
-                    .setPositiveButton("Exist App", new DialogInterface.OnClickListener() {
+                    .setPositiveButton("Exit App", new DialogInterface.OnClickListener() {
                         @Override
                         public void onClick(DialogInterface dialog, int which) {
                             finish();
