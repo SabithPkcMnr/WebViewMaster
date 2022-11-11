@@ -3,11 +3,11 @@ apply plugin: 'com.android.application'
 android {
     compileSdkVersion 32
     defaultConfig {
-        applicationId "com.sabithpkcmnr.webviewmaster"
-        minSdkVersion 14
+        applicationId "com.sawalasln.slnepay"
+        minSdkVersion 16
         targetSdkVersion 32
-        versionCode 1
-        versionName "1.0"
+        versionCode 4
+        versionName "4.0"
         testInstrumentationRunner 'androidx.test.runner.AndroidJUnitRunner'
     }
     buildTypes {
@@ -19,6 +19,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.android.gms:play-services-ads:19.6.0'
     implementation fileTree(dir: 'libs', include: ['*.jar'])
     implementation 'com.google.android.material:material:1.5.0'
 

@@ -4,6 +4,9 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/WebViewMaster.iml" filepath="$PROJECT_DIR$/.idea/modules/WebViewMaster.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/WebViewMaster.app.unitTest.iml" />
     </modules>
   </component>
 </project>
